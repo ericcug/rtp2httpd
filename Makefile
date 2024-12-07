@@ -50,8 +50,6 @@ define Package/rtp2httpd/install
 	$(INSTALL_BIN) ./files/etc/init.d/rtp2httpd $(1)/etc/init.d/rtp2httpd
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_CONF) ./files/etc/config/rtp2httpd $(1)/etc/config/rtp2httpd
-	$(INSTALL_DIR) $(1)/etc/rtp2httpd
-	$(INSTALL_CONF) ./files/etc/rtp2httpd/rtp2httpd.conf $(1)/etc/rtp2httpd/
 endef
 
 $(eval $(call BuildPackage,rtp2httpd))
