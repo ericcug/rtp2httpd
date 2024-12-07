@@ -1,5 +1,3 @@
-config global
-    option verbosity '2'
+config rtp2httpd
     option fcc_nat_traversal '0'
-    option bind_address '*'
-    option bind_port '8080'
+    option port '8080'
