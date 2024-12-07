@@ -1,0 +1,5 @@
+config global
+    option verbosity '2'
+    option fcc_nat_traversal '0'
+    option bind_address '*'
+    option bind_port '8080'
