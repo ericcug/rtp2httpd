@@ -30,10 +30,12 @@ endef
 
 define Build/Prepare
 	$(call Build/Prepare/Default)
-	$(PKG_BUILD_DIR)/autogen.sh
+	$(SED) 's,/usr/local,$(STAGING_DIR)/usr,g' $(PKG_BUILD_DIR)/Makefile.am
+	$(SED) 's,/usr/local,$(STAGING_DIR)/usr,g' $(PKG_BUILD_DIR)/configure.ac
 endef
 
 define Build/Configure
+	(cd $(PKG_BUILD_DIR); autoreconf -i)
 	$(call Build/Configure/Default)
 endef
 
